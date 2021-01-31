@@ -26,7 +26,7 @@ public class MyFrame extends JFrame implements ActionListener  {
 		this.setIconImage(icon.getImage());
 		this.setLocationRelativeTo(null);
 		
-		textField = new JTextField("0");
+		textField = new JTextField("");
 		textField.setBounds(20,15,395,70);
 		textField.setFont(new Font("Verdana",Font.PLAIN, 40));
 		textField.setHorizontalAlignment(JTextField.RIGHT);;
@@ -55,7 +55,7 @@ public class MyFrame extends JFrame implements ActionListener  {
 		for(int i=0;i<9;i++) {
 			functionButtons[i].addActionListener(this);
 			functionButtons[i].setFont(myFont);
-			functionButtons[i].setBackground(Color.black);
+			functionButtons[i].setBackground(Color.darkGray);
 			functionButtons[i].setForeground(Color.white);
 			functionButtons[i].setFocusable(false);
 		}
@@ -64,7 +64,7 @@ public class MyFrame extends JFrame implements ActionListener  {
 			numberButtons[i] = new JButton(String.valueOf(i));
 			numberButtons[i].addActionListener(this);
 			numberButtons[i].setFont(myFont);
-			numberButtons[i].setBackground(Color.black);
+			numberButtons[i].setBackground(Color.darkGray);
 			numberButtons[i].setForeground(Color.white);
 			numberButtons[i].setFocusable(false);
 		}
@@ -121,25 +121,25 @@ public class MyFrame extends JFrame implements ActionListener  {
 		if(e.getSource()==addButton) {
 			num1 = Double.parseDouble(textField.getText());
 			operator = '+';
-			textField.setText("0");
+			textField.setText("");
 		}
 		
 		if(e.getSource()==subButton) {
 			num1 = Double.parseDouble(textField.getText());
 			operator = '-';
-			textField.setText("0");
+			textField.setText("");
 		}
 
 		if(e.getSource()==mulButton) {
 			num1 = Double.parseDouble(textField.getText());
 			operator = '*';
-			textField.setText("0");
+			textField.setText("");
 		}
 
 		if(e.getSource()==divButton) {
 			num1 = Double.parseDouble(textField.getText());
 			operator = '/';
-			textField.setText("0");
+			textField.setText("");
 		}
 		
 		if(e.getSource()==eqButton) {
